@@ -70,7 +70,7 @@ img {
 library(ggplot2)
 library(lubridate)</code></pre>
 <p>The activity dataset that we are using in this example can be downloaded from <a href="https://d396qusza40orc.cloudfront.net/repdata%2Fdata%2Factivity.zip">Activity Monitoring data</a> We will read the data into a data frame. The tbl_df function of dplyr package makes the data frame easy to print. Also the date column is set to the date format. We also added 2 columns to the dataset as follows <br /> wday - to identify week day <br /> day - to identify whether it’s a weekday or weekend.</p>
-<pre class="r"><code>activity &lt;- read.csv(&quot;activity.csv&quot;, header=T, sep=&quot;,&quot;)
+<pre class="r"><code>activity &lt;- read.csv(&quot;activity/activity.csv&quot;, header=T, sep=&quot;,&quot;)
 activity &lt;- tbl_df(activity)
 activity$date &lt;- as.Date(activity$date, '%Y-%m-%d')
 activity &lt;- activity %&gt;% 

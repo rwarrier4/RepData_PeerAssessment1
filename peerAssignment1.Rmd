@@ -21,7 +21,7 @@ wday - to identify week day <br/>
 day - to identify whether it's a weekday or weekend. 
 
 ```{r}
-activity <- read.csv("activity.csv", header=T, sep=",")
+activity <- read.csv("activity/activity.csv", header=T, sep=",")
 activity <- tbl_df(activity)
 activity$date <- as.Date(activity$date, '%Y-%m-%d')
 activity <- activity %>% 
